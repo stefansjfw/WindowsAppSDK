@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation and Contributors.
+// Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
 namespace Microsoft.Windows.ApplicationModel.Resources
@@ -113,8 +113,14 @@ namespace Microsoft.Windows.ApplicationModel.Resources
         static String TargetSize { get; };
         static String Theme { get; };
     }
+} // namespace Microsoft.Windows.ApplicationModel.Resources
 
-    [contract(MrtCoreContract, 2)]
+namespace Microsoft.Windows.Globalization
+{
+    [contractversion(1)]
+    apicontract MrtCoreContract{};
+
+    [contract(MrtCoreContract, 1)]
     runtimeclass ApplicationLanguages
     {
         static IVectorView<String> Languages { get; };
@@ -122,4 +128,5 @@ namespace Microsoft.Windows.ApplicationModel.Resources
         static String PrimaryLanguageOverride;
     }
 
-} // namespace Microsoft.Windows.ApplicationModel. Resources
+} // namespace Microsoft.Windows.Globalization
+

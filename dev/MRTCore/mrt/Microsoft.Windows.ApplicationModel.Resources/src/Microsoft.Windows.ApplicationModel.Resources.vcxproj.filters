@@ -29,7 +29,7 @@
     <ClCompile Include="KnownResourceQualifierName.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ApplicationLanguages.cpp">
+    <ClCompile Include="Microsoft.Windows.Globalization.ApplicationLanguages.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -61,7 +61,7 @@
     <ClInclude Include="KnownResourceQualifierName.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ApplicationLanguages.h">
+    <ClInclude Include="Microsoft.Windows.Globalization.ApplicationLanguages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
