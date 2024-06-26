@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrtCoreUnpackagedTests", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.FrameworkUdk.PackageReference", "..\..\..\eng\PackageReference\FrameworkUdk\Microsoft.FrameworkUdk.PackageReference.csproj", "{4E965899-43FD-4654-9613-15E8EB574E01}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Microsoft.Windows.Globalization", "Microsoft.Windows.Globalization\src\Microsoft.Windows.Globalization.vcxproj", "{B6246130-D143-4EF1-8BF7-5E99F420C0CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -182,6 +184,20 @@ Global
 		{4E965899-43FD-4654-9613-15E8EB574E01}.Release|x64.Build.0 = Release|x64
 		{4E965899-43FD-4654-9613-15E8EB574E01}.Release|x86.ActiveCfg = Release|x86
 		{4E965899-43FD-4654-9613-15E8EB574E01}.Release|x86.Build.0 = Release|x86
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|ARM.ActiveCfg = Debug|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|x64.ActiveCfg = Debug|x64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|x64.Build.0 = Debug|x64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Debug|x86.Build.0 = Debug|Win32
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|ARM.ActiveCfg = Release|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|ARM64.Build.0 = Release|ARM64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|x64.ActiveCfg = Release|x64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|x64.Build.0 = Release|x64
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|x86.ActiveCfg = Release|Win32
+		{B6246130-D143-4EF1-8BF7-5E99F420C0CB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

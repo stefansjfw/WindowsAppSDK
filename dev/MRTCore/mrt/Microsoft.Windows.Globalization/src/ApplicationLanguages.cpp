@@ -11,7 +11,7 @@
 
 #include "Helper.h"
 
-namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
+namespace winrt::Microsoft::Windows::Globalization::implementation
 {
     hstring ApplicationLanguages::m_language;
 
@@ -56,4 +56,4 @@ namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
             winrt::Windows::Globalization::ApplicationLanguages::PrimaryLanguageOverride(language);
         }
     }
-} // namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
+} // namespace winrt::Microsoft::Windows::Globalization::implementation

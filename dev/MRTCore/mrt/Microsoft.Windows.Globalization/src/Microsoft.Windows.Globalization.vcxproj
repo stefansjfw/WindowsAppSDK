@@ -11,9 +11,9 @@
     <CppWinRTGenerateWindowsMetadata>true</CppWinRTGenerateWindowsMetadata>
     <CppWinRTEnabled>true</CppWinRTEnabled>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{9b3b03bc-1bc0-43ea-b3ff-d5214f3cf5cf}</ProjectGuid>
-    <ProjectName>Microsoft.Windows.ApplicationModel.Resources</ProjectName>
-    <RootNamespace>Microsoft.Windows.ApplicationModel.Resources</RootNamespace>
+    <ProjectGuid>{B6246130-D143-4EF1-8BF7-5E99F420C0CB}</ProjectGuid>
+    <ProjectName>Microsoft.Windows.Globalization</ProjectName>
+    <RootNamespace>Microsoft.Windows.Globalization</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Keyword>Win32Proj</Keyword>
@@ -95,7 +95,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>Microsoft.Windows.ApplicationModel.Resources.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>Microsoft.Windows.Globalization.def</ModuleDefinitionFile>
       <AdditionalDependencies>$(OutDir)..\mrm\MRM.lib;onecoreuap.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -110,38 +110,26 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ApplicationLanguages.h" />
     <ClInclude Include="Helper.h" />
-    <ClInclude Include="KnownResourceQualifierName.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="ResourceCandidate.h" />
-    <ClInclude Include="ResourceContext.h" />
-    <ClInclude Include="ResourceLoader.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="ResourceMap.h" />
-    <ClInclude Include="ResourceNotFoundEventArgs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationLanguages.cpp" />
     <ClCompile Include="Helper.cpp" />
-    <ClCompile Include="KnownResourceQualifierName.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="ResourceCandidate.cpp" />
-    <ClCompile Include="ResourceContext.cpp" />
-    <ClCompile Include="ResourceLoader.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="ResourceMap.cpp" />
-    <ClCompile Include="ResourceNotFoundEventArgs.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Microsoft.Windows.ApplicationModel.Resources.idl" />
+    <Midl Include="Microsoft.Windows.Globalization.idl" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Microsoft.Windows.ApplicationModel.Resources.def" />
+    <None Include="Microsoft.Windows.Globalization.def" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Microsoft.Windows.ApplicationModel.Resources.rc">
+    <ResourceCompile Include="Microsoft.Windows.Globalization.rc">
       <AdditionalIncludeDirectories>$(RepoRoot);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   </ItemGroup>
@@ -156,9 +144,6 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <OutputItemType>Content</OutputItemType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Microsoft.Windows.Globalization\src\Microsoft.Windows.Globalization.vcxproj">
-      <Project>{b6246130-d143-4ef1-8bf7-5e99f420c0cb}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

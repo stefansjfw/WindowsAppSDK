@@ -6,6 +6,8 @@
 #include "ResourceContext.g.cpp"
 #include "winrt/Windows.Globalization.h"
 
+#include "../../Microsoft.Windows.Globalization/src/ApplicationLanguages.h"
+
 const wchar_t c_languageQualifierName[] = L"Language";
 
 namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation

@@ -4,7 +4,7 @@
 #pragma once
 #include "ApplicationLanguages.g.h"
 
-namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
+namespace winrt::Microsoft::Windows::Globalization::implementation
 {
     struct ApplicationLanguages
     {
@@ -18,11 +18,11 @@ namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
     private:
         static hstring m_language;
     };
-} // namespace winrt::Microsoft::Windows::ApplicationModel::Resources::implementation
+} // namespace winrt::Microsoft::Windows::Globalization::implementation
 
-namespace winrt::Microsoft::Windows::ApplicationModel::Resources::factory_implementation
+namespace winrt::Microsoft::Windows::Globalization::factory_implementation
 {
     struct ApplicationLanguages : ApplicationLanguagesT<ApplicationLanguages, implementation::ApplicationLanguages>
     {
     };
-} // namespace winrt::Microsoft::Windows::ApplicationModel::Resources::factory_implementation
+} // namespace winrt::Microsoft::Windows::Globalization::factory_implementation
