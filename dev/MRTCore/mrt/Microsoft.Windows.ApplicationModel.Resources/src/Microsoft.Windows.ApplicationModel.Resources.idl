@@ -114,7 +114,7 @@ namespace Microsoft.Windows.ApplicationModel.Resources
         static String Theme { get; };
     }
 
-    [contract(MrtCoreContract, 2)]
+    [contract(MrtCoreContract, 1)]
     runtimeclass ApplicationLanguages
     {
         static IVectorView<String> Languages { get; };

@@ -18,7 +18,7 @@ Main branch points to the external feed.
 
 Param(
     [string]$PackageVersion = "1.1.1.1",
-    [string]$Platform = "x64",
+    [string]$Platform = "x86",
     [string]$Configuration = "Release",
     [string]$AzureBuildStep = "all",
     [string]$OutputDirectory = (Split-Path $MyInvocation.MyCommand.Path) + "\BuildOutput",
