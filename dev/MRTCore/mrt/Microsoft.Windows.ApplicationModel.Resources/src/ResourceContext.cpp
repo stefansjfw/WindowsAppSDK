@@ -74,6 +74,11 @@ void ResourceContext::InitializeQualifierValueMap()
         {
             m_qualifierValueMap.Insert(c_languageQualifierName, GetLangugageContext());
         }
+
+        if (!ApplicationLanguages::PrimaryLanguageOverride().empty())
+        {
+            m_qualifierValueMap.Insert(c_languageQualifierName, L"");
+        }
     });
 }
 
@@ -94,16 +99,35 @@ void ResourceContext::Apply()
 
     InitializeQualifierValueMap();
 
+    bool updated = false;
+
     for (auto const& eachValue : m_qualifierValueMap)
     {
+        if (eachValue.Key() == c_languageQualifierName)
+        {
+            if (!eachValue.Value().empty() && !ApplicationLanguages::PrimaryLanguageOverride().empty())
+            {
+                winrt::check_hresult(
+                    MrmSetQualifier(m_resourceContext, c_languageQualifierName, ApplicationLanguages::PrimaryLanguageOverride().c_str()));
+                updated = true;
+                continue;
+            }
+            else if (eachValue.Value().empty())
+            {
+                winrt::check_hresult(
+                    MrmSetQualifier(m_resourceContext, c_languageQualifierName, ApplicationLanguages::PrimaryLanguageOverride().c_str()));
+                continue;
+            }
+        }
         if (!eachValue.Value().empty())
         {
             winrt::check_hresult(MrmSetQualifier(m_resourceContext, eachValue.Key().c_str(), eachValue.Value().c_str()));
         }
     }
-    if (!ApplicationLanguages::PrimaryLanguageOverride().empty())
+
+    if (updated)
     {
-        winrt::check_hresult(MrmSetQualifier(m_resourceContext, c_languageQualifierName, ApplicationLanguages::PrimaryLanguageOverride().c_str()));
+        m_qualifierValueMap.Insert(c_languageQualifierName, ApplicationLanguages::PrimaryLanguageOverride().c_str());
     }
 }
 
